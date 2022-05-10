@@ -25,11 +25,10 @@ pipeline {
     }
 
     stage('Deploy') {
-      parallel {
         when{
           branch 'main'
         }
-        
+      parallel {
         stage('Deploy') {
           steps {
             input(message: 'Do you want to procced with Deployment', id: 'OK')
