@@ -28,7 +28,7 @@ pipeline {
       parallel {
         stage('Deploy') {
           steps {
-            input(message: 'Do you want to procced with Deployment', id: 'OK')
+            input(message: 'Do you want to procced with Deployment?', id: 'OK')
             echo 'Deploying the app'
           }
         }
