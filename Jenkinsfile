@@ -16,6 +16,7 @@ pipeline {
         }
 
         stage('Test Log') {
+          
           steps {
             writeFile(file: 'testlog.txt', text: 'this is automation log')
           }
@@ -25,6 +26,9 @@ pipeline {
     }
 
     stage('Deploy') {
+        when{
+          branch 'main'
+        }
       parallel {
         stage('Deploy') {
           steps {
