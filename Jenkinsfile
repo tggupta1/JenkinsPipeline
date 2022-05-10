@@ -8,7 +8,6 @@ pipeline {
             echo 'Build Application'
           }
         }
-        
 
         stage('Test') {
           steps {
@@ -25,5 +24,8 @@ pipeline {
       }
     }
 
+  }
+  environment {
+    ChromeDriverPath = 'E:\\chromedriver'
   }
 }
